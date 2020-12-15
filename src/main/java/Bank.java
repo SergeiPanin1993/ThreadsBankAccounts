@@ -49,10 +49,9 @@ public class Bank {
     public static void main(String[] args) {
         Account a1 = new Account(44444444, 3000);
         Account a2 = new Account(77777, 10);
-        Account a3 = new Account(111, 0);
 
         Set<Account> accounts = new HashSet<>();
-        Collections.addAll(accounts, a1, a2, a3);
+        Collections.addAll(accounts, a1, a2);
 
         Thread operationThread = new Thread(() -> {
             for (int i = 1; i <= 1000; i *= 10) {
